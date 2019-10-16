@@ -6,6 +6,17 @@ var crypto = require('crypto');
 
 //mandatory flag: when it set, only mandatory parameters are added to checksum
 
+var mandatoryParams = [
+  "MID",
+  "ORDER_ID",
+  "CUST_ID",
+  "TXN_AMOUNT",
+  "CHANNEL_ID",
+  "WEBSITE",
+  "CHECKSUMHASH",
+  "INDUSTRY_TYPE_ID",
+  "CALLBACK_URL"];
+
 function paramsToString(params, mandatoryflag) {
   var data = '';
   var tempKeys = Object.keys(params);
